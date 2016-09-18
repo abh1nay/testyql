@@ -73,7 +73,7 @@
             var url="http://finance.yahoo.com/q/"+ reporttype_code + "?s=" + symbol + "&" + timeframe;
 			var restquery = y.rest( url );	
 			var rawresult = restquery.accept( "text/html" ).get().response;
-			var query = y.xpath( rawresult, "//table[@class='Lh(1.7) W(100%) M(0)']/tbody/tr/td/table/tr");	
+			var query = y.xpath( rawresult, "//table[@class='Lh(1.7)']/tbody/tr/td/table/tr");	
 
             // Process Results
             var outputdata = <{reporttype} symbol={symbol} timeframe={timeframe}></{reporttype}>;
